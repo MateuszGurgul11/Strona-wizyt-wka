@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="contact">
+    <h2>Kontakt</h2>
+    <ul>
+        <li>email ...</li>
+        <li>telefon ...</li>
+    </ul>
+</div>
+
+<div class="message">
+    <h3>Wyslij wiadomosc</h3>
+
+    <form action="{{ url_for('submit_message') }}" method="post">
+        <textarea name="message" cols="30" rows="3"></textarea>
+        <button type="submit">Przeslij</button>
+    </form>
+
+    <a href="{{ url_for('about') }}">O mnie</a>
+</div>
+{% endblock %}
